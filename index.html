@@ -217,18 +217,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.35;text-wrap:bal
 @media (max-width:520px){.cats{grid-template-columns:1fr}}
 
 /* ================= 会社概要 ================= */
-.profile{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
-.brand{background:var(--bg-2);padding:2.4rem;display:grid;gap:1.4rem;justify-items:start}
-.brand .big{display:flex;align-items:center;gap:1.2rem}
-.brand .big svg{width:5.4rem;height:5.4rem;color:var(--shu)}
-.brand .big b{font-family:var(--serif);font-size:1.95rem;letter-spacing:.18em;font-weight:600;display:block;line-height:1.1;color:var(--navy)}
-.brand .big small{font-family:var(--latin);font-size:.64rem;letter-spacing:.34em;color:var(--muted);display:block;margin-top:.45rem}
-.brand p{color:var(--muted);font-size:.88rem;max-width:32em}
-.brand .vars{display:flex;gap:.6rem;flex-wrap:wrap}
-.brand .vars > div{width:4.2rem;height:4.2rem;display:grid;place-items:center;border:1px solid var(--line)}
-.brand .vars svg{width:2.4rem;height:2.4rem}
-.brand .sw{display:flex;gap:1.2rem;font-family:var(--latin);font-size:.66rem;letter-spacing:.08em;color:var(--muted)}
-.brand .sw i{display:inline-block;width:.8rem;height:.8rem;vertical-align:-1px;margin-right:.35rem;border:1px solid var(--line)}
+.profile{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:stretch}
+.brand{background:var(--bg-2);height:100%;min-height:22rem;display:grid;place-items:center;text-align:center;padding:3rem 2rem}
+.brand .big{display:grid;justify-items:center;gap:1.3rem}
+.brand .big svg{width:6.5rem;height:6.5rem;color:var(--shu)}
+.brand .big b{font-family:var(--serif);font-size:2rem;letter-spacing:.3em;text-indent:.3em;font-weight:600;display:block;line-height:1.1;color:var(--navy)}
+.brand .big small{font-family:var(--latin);font-size:.66rem;letter-spacing:.36em;text-indent:.36em;color:var(--muted);display:block;margin-top:.55rem}
 table.spec{width:100%;border-collapse:collapse;font-size:.92rem;border-top:1px solid var(--line-2)}
 table.spec th,table.spec td{text-align:left;padding:1rem 1.1rem;border-bottom:1px solid var(--line-2);vertical-align:top;line-height:1.75}
 table.spec th{width:10rem;font-weight:500;background:var(--bg-2);color:var(--navy);font-size:.86rem}
@@ -515,7 +509,6 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:4rem 0 1.8re
     <div class="profile">
       <div class="brand rv" data-d="1">
         <div class="big"><svg><use href="#hanamaru"/></svg><div><b data-i="brand">日本花丸</b><small>NIPPON HANAMARU</small></div></div>
-        <div class="vars"><div style="background:#fff"><svg style="color:#C3432B"><use href="#hanamaru"/></svg></div><div style="background:#1C2B4A"><svg style="color:#fff"><use href="#hanamaru"/></svg></div><div style="background:#C3432B"><svg style="color:#fff"><use href="#hanamaru"/></svg></div><div style="background:#fff"><svg style="color:#1C2B4A"><use href="#hanamaru"/></svg></div></div>
       </div>
       <table class="spec rv" data-d="2">
         <tr><th data-i="co.k1">会社名</th><td data-i="co.v1">日本花丸株式会社<br><span style="color:var(--muted);font-size:.84rem">Nippon Hanamaru Co., Ltd.</span></td></tr>
