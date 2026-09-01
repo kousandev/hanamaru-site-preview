@@ -136,6 +136,16 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.35;text-wrap:bal
 .news .more{margin-top:1.2rem}
 @media (max-width:900px){.news .row{grid-template-columns:1fr;gap:1.4rem}.news li a{grid-template-columns:1fr;gap:.3rem}}
 
+/* ================= news list page ================= */
+.news-page{padding-block:3.5rem 7rem;min-height:60vh}
+.news-page .crumbs{font-size:.78rem;color:var(--muted);margin-bottom:2.2rem;display:flex;gap:.6rem;align-items:center}
+.news-page .crumbs a:hover{color:var(--shu)}
+.news-page .crumbs span::before{content:"/";margin-right:.6rem;color:var(--line-2)}
+.news-page ul{list-style:none;border-top:1px solid var(--line);max-width:64rem}
+.news-page li{display:grid;grid-template-columns:7rem 6.5rem 1fr;gap:1.4rem;align-items:center;padding:1.15rem 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.news-page .year{font-family:var(--latin);font-size:.72rem;letter-spacing:.22em;color:var(--shu);font-weight:600;margin:2.4rem 0 .6rem}
+@media (max-width:900px){.news-page li{grid-template-columns:1fr;gap:.3rem}}
+
 /* ================= 事業内容 ================= */
 .biz{background:var(--bg-2)}
 .biz-list{border-top:1px solid var(--line-2)}
@@ -363,10 +373,10 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:4rem 0 1.8re
     </div>
     <div class="rv" data-d="1">
       <ul>
-        <li><a href="#"><time datetime="2026-09-01">2026.09.01</time><span class="cat" data-i="news.c1">お知らせ</span><span data-i="news.t1">コーポレートサイトをリニューアルしました。</span></a></li>
-        <li><a href="#"><time datetime="2026-07-30">2026.07.30</time><span class="cat" data-i="news.c3">取扱品目</span><span data-i="news.t3">生活雑貨カテゴリーに新規提携工場を追加しました。</span></a></li>
+        <li><a href="news.html"><time datetime="2026-09-01">2026.09.01</time><span class="cat" data-i="news.c1">お知らせ</span><span data-i="news.t1">コーポレートサイトをリニューアルしました。</span></a></li>
+        <li><a href="news.html"><time datetime="2026-07-30">2026.07.30</time><span class="cat" data-i="news.c3">取扱品目</span><span data-i="news.t3">生活雑貨カテゴリーに新規提携工場を追加しました。</span></a></li>
       </ul>
-      <a class="more" href="#" data-i="news.more">一覧を見る <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="more" href="news.html" data-i="news.more">一覧を見る <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
@@ -706,7 +716,7 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:4rem 0 1.8re
   document.querySelectorAll('.mnav a').forEach(function(a){a.addEventListener('click',function(){toggle(false)})});
 
   /* ---------- form → mailto (replace with backend later) ---------- */
-  document.getElementById('inq').addEventListener('submit',function(ev){
+  var inq=document.getElementById('inq');if(inq)inq.addEventListener('submit',function(ev){
     ev.preventDefault();var f=new FormData(ev.target);
     var body=f.get('name')+'\n'+f.get('email')+'\n'+f.get('lane')+'\n'+f.get('category')+'\n\n'+f.get('message');
     location.href='mailto:contact@jp-hanamaru.com?subject='+encodeURIComponent('[Web Inquiry] '+f.get('category'))+'&body='+encodeURIComponent(body);
