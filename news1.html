@@ -63,7 +63,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.35;text-wrap:bal
 
 /* ================= LOGO ================= */
 .logo{display:flex;align-items:center;gap:.65rem}
-.logo svg{width:2.15rem;height:2.15rem;flex:none;color:var(--shu)}
+.logo img{height:2.5rem;width:auto;flex:none;display:block}
+.logo.light img{background:#fff;border-radius:8px;padding:.25rem .45rem;height:2.7rem}
 .logo .wm{display:flex;flex-direction:column;line-height:1.05}
 .logo .wm b{font-family:var(--serif);font-weight:600;font-size:1.08rem;letter-spacing:.16em;color:var(--navy)}
 .logo .wm small{font-family:var(--latin);font-size:.52rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;margin-top:.2rem}
@@ -190,7 +191,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.35;text-wrap:bal
 .meta span{display:block;font-family:var(--latin);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .meta b{font-weight:500;color:var(--text)}
 .mat-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:.6rem}
-.mat{display:block;background:#fff;border:1px solid var(--line);padding:1.6rem 1.7rem;transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.mat{display:block;background:#fff;border:1px solid var(--line);overflow:hidden;transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.mat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.mat .mtx{padding:1.3rem 1.6rem 1.5rem}
 .mat:hover{border-color:var(--shu);transform:translateY(-2px)}
 .mat small{font-family:var(--latin);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--shu);font-weight:600}
 .mat h4{font-size:1.12rem;margin:.45rem 0 .55rem}
@@ -254,7 +257,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.35;text-wrap:bal
 /* ================= 会社概要 ================= */
 .brandbar{display:flex;align-items:center;gap:2rem;padding:2rem 0 1.8rem;margin-top:1.4rem;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
 .brandbar .lock{display:flex;align-items:center;gap:1rem}
-.brandbar .lock svg{width:3.8rem;height:3.8rem;color:var(--shu)}
+.brandbar .lock img{height:5.2rem;width:auto;display:block}
 .brandbar .lock b{font-family:var(--serif);font-size:1.45rem;letter-spacing:.22em;font-weight:600;display:block;line-height:1.1;color:var(--navy)}
 .brandbar .lock small{font-family:var(--latin);font-size:.6rem;letter-spacing:.32em;color:var(--muted);display:block;margin-top:.35rem}
 .brandbar p{font-family:var(--latin);font-size:.8rem;letter-spacing:.06em;color:var(--muted);margin:0;text-align:right}
@@ -326,7 +329,7 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:4rem 0 1.8re
 
 <header class="hd">
   <div class="wrap bar">
-    <a class="logo" href="index.html" aria-label="日本花丸株式会社"><svg><use href="#hanamaru"/></svg><span class="wm"><b data-i="brand">日本花丸</b><small>NIHONHANAMARU CO.,LTD.</small></span></a>
+    <a class="logo" href="index.html" aria-label="日本花丸株式会社"><img src="__LOGO__" alt="HANAMARU"><span class="wm"><b data-i="brand">日本花丸</b><small>NIHONHANAMARU CO.,LTD.</small></span></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="index.html#modes" data-i="nav.modes">事業内容</a></li>
@@ -374,7 +377,7 @@ footer{background:var(--navy-2);color:rgba(255,255,255,.72);padding:4rem 0 1.8re
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="logo light" href="index.html"><svg style="--bg:#14213D"><use href="#hanamaru"/></svg><span class="wm"><b data-i="brand">日本花丸</b><small>NIHONHANAMARU CO.,LTD.</small></span></a>
+        <a class="logo light" href="index.html"><img src="__LOGO__" alt="HANAMARU"><span class="wm"><b data-i="brand">日本花丸</b><small>NIHONHANAMARU CO.,LTD.</small></span></a>
         <p data-i="ft.p">東京を拠点とする B2B 商社。中国発・日本向け生活消費財の OEM / ODM、日本発・海外向けコスメ・文房具・キャラクターグッズの輸出。</p>
       </div>
       <div><h5 data-i="ft.h1">事業</h5><ul><li><a href="index.html#modes" data-i="ft.a1">OEM 受託生産</a></li><li><a href="index.html#modes" data-i="ft.a2">ODM 商品企画</a></li><li><a href="index.html#modes" data-i="ft.a3">貿易・調達代行</a></li></ul></div>
